@@ -25,7 +25,17 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
-const services = ["Express Wash", "Signature Detail", "Showroom Detail", "Exterior Only", "Interior Only", "Engine Bay Detail"];
+const services = [
+  "Exterior — Coupe/Sedan ($60)",
+  "Exterior — SUV/Small Truck ($75)",
+  "Exterior — Large SUV/Truck ($90)",
+  "Interior — Coupe/Sedan ($80)",
+  "Interior — SUV/Small Truck ($100)",
+  "Interior — Large SUV/Truck ($120)",
+  "Full Detail — Coupe/Sedan ($130)",
+  "Full Detail — SUV/Small Truck ($160)",
+  "Full Detail — Large SUV/Truck ($180)",
+];
 
 export function BookingForm() {
   const {
