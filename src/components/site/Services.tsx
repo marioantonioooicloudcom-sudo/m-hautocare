@@ -1,11 +1,9 @@
-import { Sparkles, ShieldCheck, Gauge, Droplets, Sun, Car } from "lucide-react";
+import { Sparkles, Droplets, Gauge, Car } from "lucide-react";
 
 const services = [
-  { icon: Sparkles, title: "Exterior Detail", desc: "Hand wash, decontamination, clay bar, machine polish and high-gloss finish." },
+  { icon: Sparkles, title: "Exterior Detail", desc: "Hand wash, decontamination, clay bar and high-gloss finish." },
   { icon: Car, title: "Interior Detail", desc: "Steam clean, leather conditioning, vacuum, fabric extraction and odor removal." },
-  { icon: ShieldCheck, title: "Ceramic Coating", desc: "Multi-year nano coating for hydrophobic, scratch-resistant protection." },
-  { icon: Sun, title: "Paint Correction", desc: "Multi-stage cut & polish to remove swirls, scratches and oxidation." },
-  { icon: Droplets, title: "Wash & Wax", desc: "Express foam wash, hand dry and carnauba wax finish — weekly upkeep." },
+  { icon: Droplets, title: "Express Wash", desc: "Foam hand wash, wheel & tire clean, hand dry and window clean." },
   { icon: Gauge, title: "Engine Bay Detail", desc: "Degrease, steam clean and dress for a factory-fresh engine compartment." },
 ];
 
