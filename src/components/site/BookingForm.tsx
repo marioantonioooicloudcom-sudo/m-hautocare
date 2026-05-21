@@ -25,7 +25,7 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
-const services = ["Express Wash", "Signature Detail", "Showroom Detail", "Ceramic Coating", "Paint Correction", "Interior Only"];
+const services = ["Express Wash", "Signature Detail", "Showroom Detail", "Exterior Only", "Interior Only", "Engine Bay Detail"];
 
 export function BookingForm() {
   const {

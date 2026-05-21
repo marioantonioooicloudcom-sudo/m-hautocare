@@ -15,22 +15,22 @@ const tiers = [
     features: [
       "Everything in Express",
       "Clay bar decontamination",
-      "Sealant + carnauba wax",
       "Leather & plastic conditioning",
       "Tire dressing",
+      "Interior steam clean",
       "2-hour service",
     ],
   },
   {
     name: "Showroom",
-    price: 499,
-    blurb: "Concours-level restoration.",
+    price: 349,
+    blurb: "Full inside & out restoration.",
     features: [
       "Everything in Signature",
-      "Multi-stage paint correction",
-      "1-year ceramic coating",
+      "Deep fabric extraction",
       "Engine bay detail",
       "Headlight restoration",
+      "Door jambs & trim dressing",
     ],
   },
 ];
