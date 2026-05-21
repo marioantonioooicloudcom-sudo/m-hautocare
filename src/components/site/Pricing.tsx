@@ -2,35 +2,49 @@ import { Check } from "lucide-react";
 
 const tiers = [
   {
-    name: "Express",
-    price: 79,
-    blurb: "Quick refresh, in and out.",
-    features: ["Foam hand wash", "Wheel & tire clean", "Hand dry", "Interior vacuum", "Window clean"],
-  },
-  {
-    name: "Signature",
-    price: 199,
-    featured: true,
-    blurb: "Our most popular full detail.",
+    name: "Exterior",
+    prices: [
+      { label: "Coupe / Sedan", price: 60 },
+      { label: "SUV / Small Truck", price: 75 },
+      { label: "Large SUV / Truck", price: 90 },
+    ],
     features: [
-      "Everything in Express",
-      "Clay bar decontamination",
-      "Leather & plastic conditioning",
-      "Tire dressing",
-      "Interior steam clean",
-      "2-hour service",
+      "Wheels & tires cleaned",
+      "Pre-wash + contact wash",
+      "Windows",
+      "Tire shine",
+      "Spray protection",
     ],
   },
   {
-    name: "Showroom",
-    price: 349,
-    blurb: "Full inside & out restoration.",
+    name: "Full Detail",
+    featured: true,
+    blurb: "Most popular",
+    prices: [
+      { label: "Coupe / Sedan", price: 130 },
+      { label: "SUV / Small Truck", price: 160 },
+      { label: "Large SUV / Truck", price: 180 },
+    ],
     features: [
-      "Everything in Signature",
-      "Deep fabric extraction",
-      "Engine bay detail",
-      "Headlight restoration",
-      "Door jambs & trim dressing",
+      "Full interior + exterior",
+      "More detailed cleaning",
+      "Added protection",
+    ],
+  },
+  {
+    name: "Interior",
+    prices: [
+      { label: "Coupe / Sedan", price: 80 },
+      { label: "SUV / Small Truck", price: 100 },
+      { label: "Large SUV / Truck", price: 120 },
+    ],
+    features: [
+      "Vacuum",
+      "Deep clean all surfaces",
+      "Door jambs",
+      "Windows",
+      "Rubber mats",
+      "Light stain removal included",
     ],
   },
 ];
@@ -44,7 +58,7 @@ export function Pricing() {
           <h2 className="mt-3 font-display text-4xl font-bold uppercase tracking-tight md:text-5xl">
             <span className="chrome-text">Straight rates.</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">No hidden fees. Custom quotes available for trucks, SUVs and exotics.</p>
+          <p className="mt-4 text-muted-foreground">Fully mobile — we come to you. Prices may vary based on vehicle.</p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {tiers.map((t) => (
@@ -62,11 +76,14 @@ export function Pricing() {
                 </div>
               )}
               <h3 className="font-display text-2xl font-semibold uppercase tracking-wide">{t.name}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{t.blurb}</p>
-              <div className="mt-6 flex items-baseline gap-1">
-                <span className="font-display text-5xl font-bold chrome-text">${t.price}</span>
-                <span className="text-sm text-muted-foreground">starting</span>
-              </div>
+              <ul className="mt-6 space-y-2 border-b border-border/60 pb-6">
+                {t.prices.map((p) => (
+                  <li key={p.label} className="flex items-baseline justify-between gap-3">
+                    <span className="text-sm text-muted-foreground">{p.label}</span>
+                    <span className="font-display text-xl font-bold chrome-text">${p.price}</span>
+                  </li>
+                ))}
+              </ul>
               <ul className="mt-6 space-y-3 text-sm">
                 {t.features.map((f) => (
                   <li key={f} className="flex items-start gap-2">
@@ -88,6 +105,9 @@ export function Pricing() {
             </div>
           ))}
         </div>
+        <p className="mt-8 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          Text to book · 845-271-9655
+        </p>
       </div>
     </section>
   );
