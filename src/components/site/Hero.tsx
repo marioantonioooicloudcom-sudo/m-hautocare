@@ -38,8 +38,7 @@ export function Hero() {
             <div><span className="text-2xl font-display font-semibold text-foreground">500+</span><div>Cars detailed</div></div>
             <div className="h-8 w-px bg-border" />
             <div><span className="text-2xl font-display font-semibold text-foreground">5.0</span><div>Avg. rating</div></div>
-            <div className="h-8 w-px bg-border" />
-            <div><span className="text-2xl font-display font-semibold text-foreground">3 yr</span><div>Coating warranty</div></div>
+
           </div>
         </div>
 
