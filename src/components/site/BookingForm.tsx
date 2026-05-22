@@ -51,8 +51,19 @@ export function BookingForm() {
   const service = watch("service");
 
   const onSubmit = async (values: FormValues) => {
-    await new Promise((r) => setTimeout(r, 600));
-    console.log("Booking request:", { ...values, email: "[redacted]", phone: "[redacted]" });
+    const { error } = await supabase.from("bookings").insert({
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      vehicle: values.vehicle,
+      service: values.service,
+      preferred_date: values.date,
+      notes: values.notes || null,
+    });
+    if (error) {
+      toast.error("Couldn't send request", { description: error.message });
+      return;
+    }
     toast.success("Request sent — we'll confirm shortly.", {
       description: `${values.service} on ${values.date}`,
     });
