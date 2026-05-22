@@ -64,6 +64,19 @@ export function BookingForm() {
       toast.error("Couldn't send request", { description: error.message });
       return;
     }
+    fetch("/api/public/notify-booking", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        vehicle: values.vehicle,
+        service: values.service,
+        preferred_date: values.date,
+        notes: values.notes || null,
+      }),
+    }).catch(() => {});
     toast.success("Request sent — we'll confirm shortly.", {
       description: `${values.service} on ${values.date}`,
     });
