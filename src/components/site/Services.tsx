@@ -1,10 +1,9 @@
-import { Sparkles, Droplets, Gauge, Car } from "lucide-react";
+import { Sparkles, Droplets, Car } from "lucide-react";
 
 const services = [
   { icon: Sparkles, title: "Exterior Detail", desc: "Hand wash, decontamination, clay bar and high-gloss finish." },
   { icon: Car, title: "Interior Detail", desc: "Steam clean, leather conditioning, vacuum, fabric extraction and odor removal." },
   { icon: Droplets, title: "Express Wash", desc: "Foam hand wash, wheel & tire clean, hand dry and window clean." },
-  { icon: Gauge, title: "Engine Bay Detail", desc: "Degrease, steam clean and dress for a factory-fresh engine compartment." },
 ];
 
 export function Services() {
